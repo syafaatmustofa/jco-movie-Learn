@@ -69,7 +69,7 @@ $(document).ready(function () {
 			type: 'GET',
 			dataType: 'json',
 			data: {
-				apiKey: '53552d35',
+				apiKey: '2203d785',
 				i: movieId
 			},
 			success: function (movie) {
