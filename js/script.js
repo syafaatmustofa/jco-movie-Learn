@@ -3,6 +3,7 @@ $(document).ready(function () {
 	function searchMovie() {
 		$('#list-movie').html('')
 
+		// ajax
 		$.ajax({
 			url: 'http://www.omdbapi.com',
 			type: 'GET',
@@ -47,17 +48,19 @@ $(document).ready(function () {
 			}
 		})
 	}
-
+	// seacrh tombol search
 	$('#search').click(function () {
 		searchMovie()
 	})
 
+	// fungsi spasi
 	$('#keyword').on('keyup', function (e) {
 		if (e.which === 13) {
 			searchMovie()
 		}
 	})
 
+	// detail
 	$('#list-movie').on('click', '.detail-movie', function () {
 		let movieId = $(this).data('id')
 
